@@ -4,13 +4,13 @@ module.exports = {
     entry: './app-src/app.js',
     output:{
         filename: 'bundle.js',
-        path: path.resolve(_dirname, 'dist')
+        path: path.resolve(__dirname, 'dist')
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
-                exlude: /node_modules/,
+                exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
                 }
